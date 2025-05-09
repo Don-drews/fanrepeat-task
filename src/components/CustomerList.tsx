@@ -11,13 +11,7 @@ import {
   Pagination,
   Typography,
 } from "@mui/material";
-
-const dummyData = Array.from({ length: 50 }, (_, i) => ({
-  name: `顧客${i + 1}`,
-  email: `customer${i + 1}@example.com`,
-  phone: `090-1234-5678`,
-  registrationDate: new Date(2020, 1, i + 1).toLocaleDateString(),
-}));
+import { customers } from "../data/customer";
 
 const CustomerList = () => {
   const [search, setSearch] = useState("");
@@ -25,7 +19,8 @@ const CustomerList = () => {
   const [page, setPage] = useState(1);
   const rowsPerPage = 10;
 
-  const filteredData = dummyData
+  // 顧客名での検索処理
+  const filteredData = customers
     .filter((customer) => customer.name.includes(search))
     .sort((a, b) => {
       if (sort === "name") {
@@ -37,6 +32,7 @@ const CustomerList = () => {
       );
     });
 
+  // ページネーションの変更処理
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
     value: number

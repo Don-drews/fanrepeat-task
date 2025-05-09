@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [userId, setUserId] = useState("");
@@ -45,9 +46,11 @@ const Login = () => {
       <Button variant="contained" className="mb-2" onClick={handleLogin}>
         ログイン
       </Button>
-      <Button variant="outlined" onClick={handleGuestLogin}>
-        ゲストモード
-      </Button>
+      <Link to={"/customer-list"}>
+        <Button variant="outlined" onClick={handleGuestLogin}>
+          ゲストモード
+        </Button>
+      </Link>
     </Box>
   );
 };

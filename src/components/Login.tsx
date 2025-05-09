@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { TextField, Button, Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ const Login = () => {
       <TextField
         label="ユーザーID"
         variant="outlined"
-        className="mb-4"
+        className="mb-6"
         value={userId}
         onChange={(e) => setUserId(e.target.value)}
       />
@@ -38,7 +38,7 @@ const Login = () => {
         label="パスワード"
         type="password"
         variant="outlined"
-        className="mb-4"
+        className="mb-6"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />

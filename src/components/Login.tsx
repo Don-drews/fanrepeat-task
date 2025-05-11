@@ -23,35 +23,62 @@ const Login = () => {
   };
 
   return (
-    <Box className="flex flex-col items-center justify-center min-h-screen p-4">
-      <Typography variant="h4" className="mb-4">
-        ログイン
-      </Typography>
-      <TextField
-        label="ユーザーID"
-        variant="outlined"
-        className="mb-6"
-        value={userId}
-        onChange={(e) => setUserId(e.target.value)}
-      />
-      <TextField
-        label="パスワード"
-        type="password"
-        variant="outlined"
-        className="mb-6"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {error && <Typography color="error">{error}</Typography>}
-      <Button variant="contained" className="mb-2" onClick={handleLogin}>
-        ログイン
-      </Button>
-      <Link to={"/customer-list"}>
-        <Button variant="outlined" onClick={handleGuestLogin}>
-          ゲストモード
-        </Button>
-      </Link>
-    </Box>
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="w-80">
+        <Box>
+          <div className="mb-4 flex flex-col items-center">
+            <Typography variant="h4">ログイン</Typography>
+          </div>
+
+          <div className="mb-6">
+            <TextField
+              label="ユーザーID"
+              variant="outlined"
+              sx={{ width: "100%" }}
+              value={userId}
+              onChange={(e) => setUserId(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <TextField
+              label="パスワード"
+              type="password"
+              variant="outlined"
+              sx={{ width: "100%" }}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          {error && <Typography color="error">{error}</Typography>}
+
+          <div className="flex flex-col justify-center">
+            <div className="w-full mb-2">
+              <Button
+                variant="contained"
+                size="large"
+                sx={{ width: "100%" }}
+                onClick={handleLogin}
+              >
+                ログイン
+              </Button>
+            </div>
+            <div className="">
+              <Link to={"/customer-list"}>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  sx={{ width: "100%" }}
+                  onClick={handleGuestLogin}
+                >
+                  ゲストモード
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Box>
+      </div>
+    </div>
   );
 };
 

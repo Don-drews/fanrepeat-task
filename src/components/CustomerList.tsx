@@ -6,16 +6,20 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Button,
   TextField,
   Pagination,
   Typography,
+  FormControl,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import { customers } from "../data/customer";
 
 const CustomerList = () => {
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState<"name" | "date">("name");
+  // const [sort, setSort] = useState<"name" | "date">("name");
+  const [sort, setSort] = useState<string>("name");
   const [page, setPage] = useState(1);
   const rowsPerPage = 10;
 
@@ -33,31 +37,46 @@ const CustomerList = () => {
     });
 
   // ページネーションの変更処理
-  const handlePageChange = (
-    event: React.ChangeEvent<unknown>,
-    value: number
-  ) => {
+  const handlePageChange = (_: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSort(event.target.value);
   };
 
   return (
     <Box className="p-4">
-      <Typography variant="h4" className="mb-4">
+      <Typography variant="h4" sx={{ marginBottom: "15px" }}>
         顧客一覧
       </Typography>
-      <TextField
-        label="顧客名で検索"
-        variant="outlined"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="mb-4"
-      />
-      <Button
-        variant="outlined"
-        onClick={() => setSort(sort === "name" ? "date" : "name")}
-      >
-        並び替え: {sort === "name" ? "名前順" : "登録日順"}
-      </Button>
+      <div className="flex">
+        <TextField
+          label="顧客名で検索"
+          variant="outlined"
+          value={search}
+          sx={{ height: 56, width: 250 }}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <FormControl
+          component="fieldset"
+          sx={{ height: 56, marginLeft: "20px" }}
+        >
+          <RadioGroup
+            value={sort}
+            sx={{ display: "flex", justifyContent: "center", height: "100%" }}
+            onChange={handleChange}
+            row
+          >
+            <FormControlLabel value="name" control={<Radio />} label="名前順" />
+            <FormControlLabel
+              value="date"
+              control={<Radio />}
+              label="登録日順"
+            />
+          </RadioGroup>
+        </FormControl>
+      </div>
       <Table>
         <TableHead>
           <TableRow>

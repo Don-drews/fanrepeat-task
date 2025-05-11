@@ -2,7 +2,9 @@
 
 シンプルでユーザーフレンドリーな顧客管理システムのフロントエンド実装です。このアプリケーションは、ログイン機能と顧客情報の管理機能を提供します。
 
-![image](https://github.com/user-attachments/assets/401329ce-02bb-4e02-99f1-a574c28d00a7)
+![image](https://github.com/user-attachments/assets/ab08fd9d-c7ce-46d1-9994-521d7666a760)
+![image](https://github.com/user-attachments/assets/109a5791-dbed-4936-abb3-e07105838a19)
+
 
 ## 目次
 

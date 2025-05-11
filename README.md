@@ -66,11 +66,12 @@ http://localhost:3000
 
 - **フレームワーク**: React (Create React App)
 - **UI ライブラリ**: Material-UI
-- **状態管理**: React Context API
-- **スタイリング**: Styled Components
-- **フォーム管理**: React Hook Form
-- **データ処理**: Lodash
+- **状態管理**: useState (React Hook)
+- **スタイリング**: TailwindCSS
+- **ルーティング**: React Router
 - **開発ツール**: ESLint, Prettier
+- **型管理**: TypeScript
+- **テスト**: Testing Library
 
 ## 実装した機能の説明
 
@@ -128,15 +129,7 @@ http://localhost:3000
 ```
 src/
 ├── components/        # 再利用可能なUIコンポーネント
-│   ├── Login/         # ログイン関連コンポーネント
-│   ├── CustomerList/  # 顧客一覧関連コンポーネント
-│   └── UI/            # 汎用UIコンポーネント
-├── context/           # React Context定義
-├── hooks/             # カスタムHooks
 ├── data/              # モックデータ
-├── utils/             # ユーティリティ関数
-├── pages/             # ページコンポーネント
-├── styles/            # グローバルスタイル
 └── App.js             # アプリケーションのルート
 ```
 

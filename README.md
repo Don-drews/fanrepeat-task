@@ -121,5 +121,6 @@ http://localhost:3000
 src/
 ├── components/        # 再利用可能なUIコンポーネント
 ├── data/              # モックデータ
+├── pages/             # ページコンポーネント
 └── App.js             # アプリケーションのルート
 ```

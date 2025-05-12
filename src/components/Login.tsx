@@ -64,7 +64,8 @@ const Login = () => {
               </Button>
             </div>
             <div className="">
-              <Link to={"/customer-list"}>
+              {/* <Link to={"/customer-list"}> */}
+              <Link to={"/home"}>
                 <Button
                   variant="outlined"
                   size="large"

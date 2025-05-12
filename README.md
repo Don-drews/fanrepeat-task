@@ -36,8 +36,8 @@
 1. リポジトリをクローンします
 
 ```bash
-git clone https://github.com/yourusername/simple-crm.git
-cd simple-crm
+git clone https://github.com/Don-drews/fanrepeat-task.git
+cd fanrepeat-task
 ```
 
 2. 依存パッケージをインストールします

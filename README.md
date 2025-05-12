@@ -4,6 +4,10 @@
 
 ![image](https://github.com/user-attachments/assets/1be9e44a-4a95-468a-b532-53061c23d830)
 ![image](https://github.com/user-attachments/assets/caa3a075-a479-4680-b502-6d4ddbcb6c83)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9508eac715b1a3686908498751c88cd1acc4a23d
 
 ## 目次
 
@@ -28,6 +32,10 @@
 
 以下の手順でアプリケーションをローカル環境で実行できます。
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9508eac715b1a3686908498751c88cd1acc4a23d
 ### インストール
 
 1. リポジトリをクローンします
@@ -92,8 +100,13 @@ http://localhost:3000
 
 ### 3. デザイン
 
+<<<<<<< HEAD
 - Material-UI を使用した一貫性のあるデザイン
 - アクセシビリティに配慮した UI 設計
+=======
+- Material-UIを使用した一貫性のあるデザイン
+- アクセシビリティに配慮したUI設計
+>>>>>>> 9508eac715b1a3686908498751c88cd1acc4a23d
 
 ## 動作確認方法
 

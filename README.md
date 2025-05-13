@@ -1,6 +1,6 @@
 # 顧客管理システム
 
-シンプルでユーザーフレンドリーな顧客管理システムのフロントエンド実装です。このアプリケーションは、ログイン機能と顧客情報の管理機能を提供します。
+シンプルな顧客管理システムのフロントエンド実装です。このアプリケーションは、ログイン機能と顧客情報の管理機能を提供します。
 
 ![image](https://github.com/user-attachments/assets/1be9e44a-4a95-468a-b532-53061c23d830)
 ![image](https://github.com/user-attachments/assets/caa3a075-a479-4680-b502-6d4ddbcb6c83)
